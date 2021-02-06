@@ -1,22 +1,22 @@
 import styled from 'styled-components';
-import { useState } from 'react';
 
-const Button = styled.button`
-  color: black;
-  width: 300px;
-  height: 100px;
-  margin-top: 32px;
-  margin-left: 32px;
-  background: green;
-`;
+import useFetchPokemon from '../pages/useRequest/api';
+import Pokemon from '../components/Pokemon/Pokemon';
 
-export default function Home(props) {
-  const [count, setCount] = useState(0);
+export default function Home() {
+  const { result, error } = useFetchPokemon();
+
+  if (error) return <h1>Something went wrong!</h1>;
+  if (!result) return <h1>Loading...</h1>;
 
   return (
-    <>
-      <Button onClick={() => setCount(count + 1)}>CONTADOR</Button>
-      <h1>{count}</h1>
-    </>
+    <main className="App">
+      <h1>My pokemons</h1>
+      <div>
+        {result.results.map((pokemon) => (
+          <Pokemon pokemon={pokemon} key={pokemon.name} />
+        ))}
+      </div>
+    </main>
   );
 }
