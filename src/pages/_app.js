@@ -1,7 +1,5 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
-import '../components/Pokemon/styles.css';
-
 const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;

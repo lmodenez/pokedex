@@ -1,22 +1,21 @@
 import styled from 'styled-components';
+import Link from 'next/link';
+import Head from 'next/head';
+import Image from 'next/image';
 
-import useFetchPokemon from '../pages/useRequest/api';
-import Pokemon from '../components/Pokemon/Pokemon';
+import Pokedex from '../components/cardPokemon/index';
+
+const Main = styled.main`
+  background-color: #1e90ff;
+`;
 
 export default function Home() {
-  const { result, error } = useFetchPokemon();
-
-  if (error) return <h1>Something went wrong!</h1>;
-  if (!result) return <h1>Loading...</h1>;
-
   return (
-    <main className="App">
-      <h1>My pokemons</h1>
-      <div>
-        {result.results.map((pokemon) => (
-          <Pokemon pokemon={pokemon} key={pokemon.name} />
-        ))}
-      </div>
-    </main>
+    <Main>
+      <Head>
+        <title>HOME | POKEMONS</title>
+      </Head>
+      <Pokedex />
+    </Main>
   );
 }
