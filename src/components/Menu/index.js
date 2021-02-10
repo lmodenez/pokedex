@@ -4,14 +4,28 @@ const Wrapper = styled.div`
   margin-bottom: 48px;
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Image = styled.img`
   width: 300px;
   height: 150px;
-  margin-left: 20%;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
   margin-top: 24px;
+
+  @media (min-width: 768px) {
+    width: 300px;
+    height: 150px;
+    margin-left: 20%;
+    justify-items: center;
+    margin-top: 24px;
+  }
 `;
 
 const InputSearch = styled.input`
@@ -24,10 +38,18 @@ const InputSearch = styled.input`
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   padding: 8px;
   width: 20%;
-  margin-left: 48px;
   height: 40px;
   font-family: 'pokemon-font', monospace;
   font-size: 16px;
+  margin-left: 40px;
+
+  @media (max-width: 768px) {
+    width: 80%;
+    height: 10%;
+    justify-items: center;
+    margin-top: 24px;
+    margin-right: 41px;
+  }
 `;
 
 export default function Menu() {

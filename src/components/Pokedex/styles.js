@@ -8,11 +8,16 @@ export const WrapperPokemons = styled.div`
   background-color: white;
   border-radius: 10px;
   display: grid;
+  flex-direction: column;
   grid-template-columns: repeat(2, minmax(12rem, 1fr));
   grid-gap: 20px 50px;
   padding: 48px;
   margin-left: 10%;
   margin-right: 10%;
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
 `;
 
 export const Card = styled.div`
@@ -50,12 +55,16 @@ export const CardPokemonContent = styled.div`
 export const Types = styled.h1`
   background: #1e90ff;
   color: white;
-  margin-left: 20%;
+  margin-left: 15%;
   border-radius: 10px;
   border-top: 0.5px;
   border-bottom: 0.5px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   padding: 8px;
+
+  @media (max-width: 1440px) {
+    display: none;
+  }
 `;
 
 export const Image = styled.img`
