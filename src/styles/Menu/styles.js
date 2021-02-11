@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+export const WrapperMenu = styled.div`
   margin-bottom: 48px;
   display: flex;
   align-items: center;
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Image = styled.img`
+export const ImageMenu = styled.img`
   width: 300px;
   height: 150px;
   display: flex;
@@ -28,7 +28,7 @@ const Image = styled.img`
   }
 `;
 
-const InputSearch = styled.input`
+export const InputSearchMenu = styled.input`
   align-items: center;
   margin-top: 24px;
   border: 1px;
@@ -51,14 +51,3 @@ const InputSearch = styled.input`
     margin-right: 41px;
   }
 `;
-
-export default function Menu() {
-  return (
-    <>
-      <Wrapper>
-        <Image src="/logo.png" />
-        <InputSearch type="text" placeholder="Search for a pokemon" />
-      </Wrapper>
-    </>
-  );
-}
