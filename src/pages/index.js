@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import { useRouter } from 'next/router';
 
 import axios from 'axios';
 import useSWR from 'swr';
@@ -24,6 +25,8 @@ export default function Home() {
   const [search, setSearch] = useState('');
   const { data: response } = useSWR(`/api/search?name=${search}`, axios);
 
+  const router = useRouter();
+
   const handleSearch = useCallback((event) => {
     setSearch(event.target.value);
   }, []);
@@ -44,7 +47,11 @@ export default function Home() {
         <P.WrapperPokemons>
           {response?.data ? (
             response?.data.map((pokemon) => (
-              <P.Card>
+              <P.Card
+                onClick={() =>
+                  router.push(`/pokemon/${('000' + pokemon.id).slice(-3)}`)
+                }
+              >
                 <P.CardPokemonTitle>
                   <h1>{pokemon.name.english}</h1>
                 </P.CardPokemonTitle>
