@@ -48,9 +48,7 @@ export default function Home() {
           {response?.data ? (
             response?.data.map((pokemon) => (
               <P.Card
-                onClick={() =>
-                  router.push(`/pokemon/${('000' + pokemon.id).slice(-3)}`)
-                }
+                onClick={() => router.push(`/pokemon/${pokemon.name.english}`)}
               >
                 <P.CardPokemonTitle>
                   <h1>{pokemon.name.english}</h1>
