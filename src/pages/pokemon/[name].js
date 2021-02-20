@@ -40,6 +40,7 @@ export default function Pokemon(props) {
       <h1>{pokemonFound.base['Sp. Defense']}</h1>
       <h1>{pokemonFound.base.Speed}</h1>
       <h1>{pokemonFound.base['Sp. Defense']}</h1>
+      // DO THE PAGINATION HERE
     </>
   );
 }
