@@ -33,8 +33,24 @@ export const BoxName = styled.div`
 
 export const BoxInfo = styled.div`
   margin-top: 8px;
-  max-width: 100%;
+  max-width: 50%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin-left: 25%;
+`;
+
+export const Span = styled.span`
+  font-size: 24px;
+  font-weight: bold;
   justify-content: center;
+`;
+
+export const H1 = styled.h1`
+  background-color: #1e90ff;
+  border-radius: 10px;
+  width: 64px;
+  text-align: center;
+  box-shadow: 5px solid black;
+  color: white;
 `;
