@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-   <a href="https://pokedex-nextjs-neon.vercel.app/">Check out the live version of the SSG application</a>
+   <a href="https://pokedex-next-jlb02shz8-lmodenez.vercel.app/">Check out the live version of the SSG application</a>
 </p>
 
 # :dart: Goals
