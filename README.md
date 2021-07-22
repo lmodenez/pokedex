@@ -21,20 +21,20 @@
 
 The goal of this project is to explore the SSG render method that the NextJS framework provides, such as:
 
-- [Static Site Generation](https://github.com/lmodenez/pokedexv2)
+- [Static Site Generation](https://github.com/lmodenez/pokedex)
 
 # :construction_worker: Installation
 
 **You need to install [Node.js](https://pt-br.reactjs.org/) and [Yarn](https://yarnpkg.com/) first, then in order to clone the project via HTTPS, run this command:**
 
 ```
-  git clone https://github.com/lmodenez/pokedexv2.git
+  git clone https://github.com/lmodenez/pokedex.git
 ```
 
 SSH URLs provide access to a Git repository via SSH, a secure protocol. If you have a SSH key registered in your Github account, clone the project using this command:
 
 ```
-  git clone git@github.com:lmodenez/pokedexv2.git
+  git clone git@github.com:lmodenez/pokedex.git
 ```
 
 **Install dependencies**
